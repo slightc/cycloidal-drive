@@ -17,7 +17,7 @@ module motor_hole(ha) {
         cycloidal_roller(
             4,
             sqrt(2)*(motor_hole_size)/2,
-            (4.2)/2,
+            (3.6)/2,
             ha+0.1, 0.2);
 }
 

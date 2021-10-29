@@ -1,6 +1,7 @@
 /**
  *
  */
+include <MCAD/bearing.scad>;
 
 module bearing(model=[22,8,7], outline=false,
                 material=Steel, sideMaterial=Brass) {
