@@ -3,3 +3,5 @@
 *.stl
 *.jpg
 *.png
+
+!doc/*.png
