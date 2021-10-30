@@ -4,7 +4,7 @@ include <../lib/user.scad>;
 include <./base.scad>;
 
 
-module part_out() {
+module part_out(roller_height=cycloidal_roller_height) {
     ha = 10;
     difference() {        
         union(){
@@ -15,7 +15,7 @@ module part_out() {
         translate([0, 0, ha+0.1]) 
             center_cylinder(r=5.5/2, h=-(ha+1));
 
-        translate([0, 0, 3]) 
+        translate([0, 0, roller_height - 3 - print_delta]) 
             cycloidal_roller(
                 cycloidal_out_roller_num,
                 (cycloidal_out_diameter)/2,
