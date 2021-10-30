@@ -17,8 +17,8 @@ some param can change in `param.scad`.
 |parts|used|
 |-|-|
 | 3*8mm rollers | for drive rollers and output link |
-| 8*12*3.5mm bearing | for eccentric rotation |
-| 25*37*7mm bearing | for output fixed |
+| 8\*12\*3.5mm bearing | for eccentric rotation |
+| 25\*37\*7mm bearing | for output fixed |
 
 ## thanks
 
