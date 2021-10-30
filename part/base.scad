@@ -8,7 +8,7 @@ module cycloidal_roller_hole(h){
         cycloidal_roller_num,
         cycloidal_diameter/2,
         (cycloidal_roller_diameter+print_delta)/2,
-        h, 0.2);
+        h);
 }
 
 module motor_hole(ha) {
@@ -18,7 +18,7 @@ module motor_hole(ha) {
             4,
             sqrt(2)*(motor_hole_size)/2,
             (3.6)/2,
-            ha+0.1, 0.2);
+            ha+0.1);
 }
 
 h1 = 3.5;
@@ -49,7 +49,7 @@ module part_base() {
                     cycloidal_roller_num,
                     cycloidal_diameter/2-1,
                     (cycloidal_roller_diameter-0.5)/2,
-                    ha+0.1, 0.2);
+                    ha+0.1);
 
         translate([0,0,ha - h2 ])
             rotate([0, 0, 8.5]) 
@@ -57,7 +57,7 @@ module part_base() {
                     cycloidal_roller_num,
                     cycloidal_diameter/2-1,
                     (cycloidal_roller_diameter-0.5)/2,
-                    ha+0.1, 0.2);
+                    ha+0.1);
 
         motor_hole(ha);
     }

@@ -20,7 +20,7 @@ module part_out() {
                 cycloidal_out_roller_num,
                 (cycloidal_out_diameter)/2,
                 (cycloidal_roller_diameter+print_delta)/2,
-                -(cycloidal_roller_height),0.2);
+                -(cycloidal_roller_height));
 
         translate([0, 0, ha-6]) {
             rotate([0, 0, 360/12]) 
@@ -28,7 +28,7 @@ module part_out() {
                     6,
                     (18)/2,
                     (cycloidal_roller_diameter+print_delta)/2,
-                    (cycloidal_roller_height),0.2);
+                    (cycloidal_roller_height));
         }
     }
 }

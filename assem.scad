@@ -7,6 +7,11 @@ include <./part/eccentric.scad>;
 include <./part/shell.scad>;
 include <./part/out.scad>;
 
+fs_all = 0;
+fs1 = 0.5;
+fs2 = 0.2;
+stop1 = false;
+stop2 = true;
 
 module assem_motor() {
     color(BlackPaint,0.5) translate([0, 0, 1])
@@ -63,9 +68,14 @@ module assem_out(theta=0) {
             }
 }
 
+function calc_theta(stop, default = 0) =
+    stop ? default : 360 * (cycloidal_roller_num - 1) * $t;
+
+function get_fs(primary, sub) = primary > 0.01 ? primary : sub;
 
 module assem_all(){
-    theta = 360 * (cycloidal_roller_num - 1)* $t;
+    $fs = get_fs(fs_all, fs1);
+    theta = calc_theta(stop1);
     assem_motor();
     assem_base();
     assem_rotor(theta);
@@ -76,10 +86,9 @@ module assem_all(){
 }
 assem_all();
 
-stop2 = true;
-
 module assem_all2(){
-    theta = stop2?0:360 * (cycloidal_roller_num - 1)* $t;
+    $fs = get_fs(fs_all, fs2);
+    theta = calc_theta(stop2);
     d = 20;
     translate([80,0,-30]){
         assem_motor();

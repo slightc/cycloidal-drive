@@ -22,6 +22,6 @@ module part_rotor() {
                 cycloidal_out_roller_num,
                 (cycloidal_out_diameter)/2,
                 (cycloidal_roller_diameter)/2+cycloidal_e+ print_delta,
-                cycloidal_rotor_height+1,0.2);
+                cycloidal_rotor_height+1);
     }
 }
