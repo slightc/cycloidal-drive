@@ -18,11 +18,11 @@ module cycloidal_rotor(N,Rn,E,rn,h,fs=$fs/5) {
 
 module cycloidal_roller(N,Rn,rn,h,fs=$fs) {
     translate([0, 0, h>0?0:h])
-    linear_extrude(height=h>0?h:-h)
-        for (n=[0:N-1]) {
-            translate([Rn*sin(360*n/N), Rn*cos(360*n/N), 0])
-                circle(rn,$fs = fs);
-        }
+        linear_extrude(height=h>0?h:-h)
+            for (n=[0:N-1]) {
+                translate([Rn*sin(360*n/N), Rn*cos(360*n/N), 0])
+                    circle(rn,$fs = fs);
+            }
 }
 
 module cycloidal_test() {

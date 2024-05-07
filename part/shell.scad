@@ -16,11 +16,11 @@ module part_shell() {
             center_cylinder(r=31/2+print_delta, h=(ha+0.1));
         
         translate([0,0,ha-7-0.05])
-            center_cylinder(r=37/2, h=(7+0.1));
+            center_cylinder(r=37/2+print_delta/2, h=(7+0.1));
         
         motor_hole(ha);
 
-    translate([0,0,(cycloidal_roller_height-cycloidal_rotor_height)/2])
+    translate([0,0,(cycloidal_roller_height-cycloidal_rotor_height)/2+print_delta])
         cycloidal_roller_hole(-cycloidal_roller_height);
     }
 }
